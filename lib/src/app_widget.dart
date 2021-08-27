@@ -10,10 +10,18 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: 'Meu Alelo',
       scrollBehavior: ScrollBehaviorWidget(),
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: AppColors.primaryMaterialColor,
       ),
-      home: ClubPage(),
+      home: SplashPage(),
+      initialRoute: AppRoutes.splash,
+      routes: {
+        AppRoutes.splash: (_) => SplashPage(),
+        AppRoutes.options: (_) => OptionsPage(),
+        AppRoutes.messages: (_) => MessagesPage(),
+        AppRoutes.club: (_) => ClubPage(),
+      },
     );
   }
 }

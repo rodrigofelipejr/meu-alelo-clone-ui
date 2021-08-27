@@ -9,7 +9,9 @@ class AppColors {
   static const Color grayLight = Color(0xFFF3F3F3);
   // static const Color grayLight = Color(0xFFEFEFEF);
   static const Color white = Color(0xFFFFFFFF);
-  static const Color pink = Color(0xFFBD2E6C);
+  static const Color pink = Color(0xFFfe5292);
+  static const Color purple = Color(0xFF420089);
+  static const Color black = Color(0xFF000000);
 
   static const MaterialColor primaryMaterialColor = MaterialColor(0XFFBDD753, {
     50: Color.fromRGBO(189, 215, 83, 0.05),
