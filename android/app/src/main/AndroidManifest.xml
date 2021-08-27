@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.alelo">
+    package="br.com.alelo">
    <application
         android:label="Meu Alelo"
         android:icon="@mipmap/ic_launcher">

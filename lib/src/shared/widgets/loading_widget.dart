@@ -1,5 +1,6 @@
-import 'package:alelo/src/shared/resources/resources.dart';
 import 'package:flutter/material.dart';
+
+import '../resources/resources.dart';
 
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class LoadingWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
             height: defaultSize,

@@ -37,13 +37,9 @@ class _MessagesPageState extends State<MessagesPage> {
         child: SingleChildScrollView(
           child: LayoutBuilder(
             builder: (context, snapshot) {
-              switch (_isLoading) {
-                case true:
-                  return LoadingWidget();
+              if (_isLoading) return LoadingWidget();
 
-                default:
-                  return EmptyMessageWidget();
-              }
+              return EmptyMessageWidget();
             },
           ),
         ),
