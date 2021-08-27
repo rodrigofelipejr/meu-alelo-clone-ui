@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../shared/resources/resources.dart';
 import '../../shared/widgets/widgets.dart';
 import 'widgets/widgets.dart';
 
@@ -31,6 +32,7 @@ class _MessagesPageState extends State<MessagesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(title: 'Mensagens'),
+      backgroundColor: AppColors.grayLight,
       body: Center(
         child: SingleChildScrollView(
           child: LayoutBuilder(

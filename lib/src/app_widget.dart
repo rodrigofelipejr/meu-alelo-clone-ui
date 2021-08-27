@@ -13,7 +13,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: AppColors.primaryMaterialColor,
       ),
-      home: MessagesPage(),
+      home: OptionsPage(),
     );
   }
 }

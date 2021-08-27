@@ -19,7 +19,7 @@ class EmptyMessageWidget extends StatelessWidget {
           width: screenWidthPercentage(context) * 0.5,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: AppColors.lime1,
+            color: AppColors.lime,
             borderRadius: BorderRadius.circular(200.0),
           ),
           child: Padding(

@@ -18,6 +18,7 @@ class MenuOptionsWidget extends StatelessWidget {
         final bool isLast = (menuItems.length - 1) != index;
 
         return Container(
+          color: AppColors.white,
           padding: const EdgeInsets.symmetric(horizontal: 14.0),
           child: Column(
             children: [
