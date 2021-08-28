@@ -17,6 +17,27 @@ class AppTypography {
     fontFamily: "MuseoSans",
   );
 
+  static const TextStyle green12w300Museo = TextStyle(
+    color: AppColors.greenDark,
+    fontWeight: FontWeight.w300,
+    fontSize: 12.0,
+    fontFamily: "MuseoSans",
+  );
+
+  static const TextStyle green22w700Museo = TextStyle(
+    color: AppColors.greenDark,
+    fontWeight: FontWeight.w700,
+    fontSize: 22.0,
+    fontFamily: "MuseoSans",
+  );
+
+  static const TextStyle green18w700Museo = TextStyle(
+    color: AppColors.greenDark,
+    fontWeight: FontWeight.w700,
+    fontSize: 18.0,
+    fontFamily: "MuseoSans",
+  );
+
   static const TextStyle green20w300Museo = TextStyle(
     color: AppColors.greenDark,
     fontWeight: FontWeight.w300,
