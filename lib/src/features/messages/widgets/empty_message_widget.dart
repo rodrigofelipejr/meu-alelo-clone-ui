@@ -1,9 +1,9 @@
-import 'package:alelo/src/shared/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../shared/helpers/helpers.dart';
 import '../../../shared/resources/resources.dart';
+import '../../../shared/widgets/widgets.dart';
 
 class EmptyMessageWidget extends StatelessWidget {
   const EmptyMessageWidget({Key? key}) : super(key: key);

@@ -14,13 +14,13 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: AppColors.primaryMaterialColor,
       ),
-      home: SplashPage(),
-      initialRoute: AppRoutes.splash,
+      initialRoute: AppRoutes.home,
       routes: {
         AppRoutes.splash: (_) => SplashPage(),
-        AppRoutes.options: (_) => OptionsPage(),
-        AppRoutes.messages: (_) => MessagesPage(),
+        AppRoutes.home: (_) => HomePage(),
         AppRoutes.club: (_) => ClubPage(),
+        AppRoutes.messages: (_) => MessagesPage(),
+        AppRoutes.options: (_) => OptionsPage(),
       },
     );
   }

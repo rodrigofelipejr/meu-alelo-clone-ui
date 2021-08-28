@@ -21,7 +21,7 @@ class _SplashPageState extends State<SplashPage> {
 
     WidgetsBinding.instance?.addPostFrameCallback((_) {
       Future.delayed(Duration(seconds: 3)).then(
-        (_) => Navigator.of(context).pushReplacementNamed(AppRoutes.options),
+        (_) => Navigator.of(context).pushReplacementNamed(AppRoutes.home),
       );
     });
   }
@@ -40,7 +40,7 @@ class _SplashPageState extends State<SplashPage> {
         statusBarIconBrightness: Brightness.light,
       ),
       child: Scaffold(
-        backgroundColor: AppColors.purple,
+        backgroundColor: AppColors.violet,
         extendBody: true,
         body: Container(
           height: screenHeight(context),

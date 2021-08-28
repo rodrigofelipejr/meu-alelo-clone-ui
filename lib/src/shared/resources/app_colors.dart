@@ -51,18 +51,21 @@ class AppColors {
 }
 
 /*
-static const Color greenDark = Color(0xFF007F61);
+  static const Color greenDark = Color(0xFF007F61);
   static const Color lime = Color(0xFFBDD753);
-  // static const Color lime = Color(0xFF90B02D);
+  static const Color lime = Color(0xFF90B02D);
   static const Color gray = Color(0xFF858585);
   static const Color grayLight = Color(0xFFF3F3F3);
-  // static const Color grayLight = Color(0xFFEFEFEF);
+  static const Color grayLight = Color(0xFFEFEFEF);
   static const Color white = Color(0xFFFFFFFF);
   static const Color pink = Color(0xFFfe5292); 
   static const Color black = Color(0xFF000000);
-
   static const Color title = Color(0xFF282828);
   static const Color body = Color(0xFF505050);
   static const Color body2 = Color(0xFF696969);
   static const Color background = Color(0xFFf7f7f7);
+  static const Color greenDarkGradient = Color(0xFF087363);
+  static const Color greenGradient = Color(0xFF04967E);
+  static const Color limeDarkGradient = Color(0xFFAFCD31);
+  static const Color limeGradient = Color(0xFFC2EA20);
 */
