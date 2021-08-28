@@ -30,6 +30,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^9.1.0
   webview_flutter: ^2.0.12
+  carousel_slider: ^4.0.0
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
@@ -72,31 +74,16 @@ flutter:
           weight: 700
     - family: MuseoSans
       fonts:
-        - asset: assets/fonts/MuseoSans/MuseoSans-100.ttf
+        - asset: assets/fonts/MuseoSans/MuseoSansCyrl100.ttf
           weight: 100
-        - asset: assets/fonts/MuseoSans/MuseoSans-100Italic.ttf
-          weight: 100
-          style: italic
-        - asset: assets/fonts/MuseoSans/MuseoSans-300.ttf
+        - asset: assets/fonts/MuseoSans/MuseoSansCyrl300.ttf
           weight: 300
-        - asset: assets/fonts/MuseoSans/MuseoSans-300Italic.ttf
-          weight: 300
-          style: italic
-        - asset: assets/fonts/MuseoSans/MuseoSans-500.ttf
+        - asset: assets/fonts/MuseoSans/MuseoSansCyrl500.ttf
           weight: 500
-        - asset: assets/fonts/MuseoSans/MuseoSans-500Italic.ttf
-          weight: 500
-          style: italic
-        - asset: assets/fonts/MuseoSans/MuseoSans-700.ttf
+        - asset: assets/fonts/MuseoSans/MuseoSansCyrl700.ttf
           weight: 700
-        - asset: assets/fonts/MuseoSans/MuseoSans-700Italic.ttf
-          weight: 700
-          style: italic
-        - asset: assets/fonts/MuseoSans/MuseoSans-900.ttf
+        - asset: assets/fonts/MuseoSans/MuseoSansCyrl900.ttf
           weight: 900
-        - asset: assets/fonts/MuseoSans/MuseoSans-900Italic.ttf
-          weight: 900
-          style: italic
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
