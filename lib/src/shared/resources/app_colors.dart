@@ -7,6 +7,7 @@ class AppColors {
   static const Color limeDark = Color(0xFF829623);
   static const Color limeWhite = Color(0xFFfafaf0);
   static const Color green = Color(0xFF0e7f61);
+  static const Color greenMedium = Color(0xFF057557);
   static const Color greenDark = Color(0xFF00503c);
   static const Color greenWhite = Color(0xFFebfffa);
   static const Color aqua = Color(0xFF5aafaf);
@@ -34,7 +35,6 @@ class AppColors {
   static const Color grayDark = Color(0xFF4a4a4a);
   static const Color grayMedium = Color(0xFF878787);
   static const Color grayLight = Color(0xFFd7d7d7);
-  static const Color grayLight2 = Color(0xFFf0f0f0);
 
   static const MaterialColor primaryMaterialColor = MaterialColor(0XFFBDD753, {
     50: Color.fromRGBO(189, 215, 83, 0.05),

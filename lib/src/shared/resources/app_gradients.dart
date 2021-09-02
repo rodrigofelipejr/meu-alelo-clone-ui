@@ -6,9 +6,9 @@ class AppGradients {
   static Gradient gradientLime = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
-    stops: [0.1, 0.9],
+    stops: [0.15, 0.9],
     colors: [
-      AppColors.limeDark,
+      AppColors.limeMedium,
       AppColors.lime,
     ],
   );
@@ -16,9 +16,9 @@ class AppGradients {
   static Gradient gradientGreen = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
-    stops: [0.1, 0.9],
+    stops: [0.15, 0.9],
     colors: [
-      AppColors.greenDark,
+      AppColors.greenMedium,
       AppColors.green,
     ],
   );
