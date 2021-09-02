@@ -20,7 +20,7 @@ class CardWidget extends StatelessWidget {
   Gradient get gradient => isTypePrimary ? AppGradients.gradientGreen : AppGradients.gradientLime;
   Color get color => isTypePrimary ? AppColors.grayLight : AppColors.greenDark;
   Color get colorLines => isTypePrimary ? AppColors.grayLight : AppColors.greenDark;
-  Color get iconBackgroundColor => isTypePrimary ? AppColors.greenDark : AppColors.limeDark;
+  Color get iconBackgroundColor => isTypePrimary ? AppColors.greenMedium : AppColors.limeMedium;
 
   Widget _buildIcon() {
     return isTypePrimary

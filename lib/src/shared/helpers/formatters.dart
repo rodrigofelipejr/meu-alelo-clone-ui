@@ -6,8 +6,9 @@ class Formatters {
     return '${prefix ? "R\$ " : ""}${currency.format(value)}';
   }
 
-  static String dateParsing(DateTime date) {
-    var format = DateFormat('dd/MM/yyyy');
-    return format.format(date);
+  static String dateDayMonthHourMinute(DateTime date) {
+    var dayMonth = DateFormat('dd/MM');
+    var hourMinute = DateFormat('HH/mm');
+    return '${dayMonth.format(date)} às ${hourMinute.format(date)}h';
   }
 }
