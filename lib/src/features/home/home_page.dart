@@ -1,12 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 
 import '../../shared/helpers/helpers.dart';
 import '../../shared/resources/resources.dart';
 import '../../shared/widgets/widgets.dart';
 import 'constants/constants.dart';
-import 'home_controller.dart';
+import 'home_store.dart';
 import 'widgets/widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,13 +16,49 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  late final HomeController _controller;
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  late final HomeStore _store;
+  late final CarouselController _carouselController;
+  late final List<Widget> _carouselSliderItems;
 
   @override
   void initState() {
     super.initState();
-    _controller = HomeController();
+
+    _store = HomeStore();
+    _carouselController = CarouselController();
+    _carouselSliderItems = _buildCardWidgets(context);
+  }
+
+  List<Widget> _buildCardWidgets(BuildContext context) {
+    Constants.cards.sort((a, b) => (b.blocked) ? -1 : 1);
+
+    final widgets = Constants.cards
+        .map<Widget>(
+          (item) => Container(
+            margin: const EdgeInsets.symmetric(vertical: 8.0),
+            child: CardWidget(
+              params: item,
+            ),
+          ),
+        )
+        .toList();
+
+    widgets.add(LastCardWidget());
+
+    return widgets;
+  }
+
+  void _handleOnCardChanged(int index) {
+    final isLastIndex = (_carouselSliderItems.length - 1) == index;
+
+    _store.setState(
+      _store.state.copyWith(
+        currentIndexCard: index,
+        showAllOptions: isLastIndex ? false : true,
+        showUnlock: isLastIndex ? false : Constants.cards[index].blocked,
+      ),
+    );
   }
 
   @override
@@ -39,65 +75,71 @@ class _HomePageState extends State<HomePage> {
             minHeight: screenHeight(context),
             minWidth: screenWidth(context),
           ),
-          // margin: const EdgeInsets.only(top: 24.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CarouselSlider(
                 options: CarouselOptions(
                   enableInfiniteScroll: false,
                   viewportFraction: 0.85,
+                  onPageChanged: (index, _) => _handleOnCardChanged(index),
                 ),
-                items: _buildCardWidgets(context),
+                items: _carouselSliderItems,
+                carouselController: _carouselController,
               ),
               Container(
                 alignment: Alignment.centerRight,
                 padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 32.0),
                 child: Text(
-                  _controller.lastUpdate,
+                  Formatters.dateDayMonthHourMinute(DateTime.now()),
                   style: AppTypography.gray12w300Museo,
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  DotWidget(active: true),
-                  DotWidget(),
-                  DotWidget(),
-                  DotWidget(),
-                ],
+              Observer(
+                builder: (_) {
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: _carouselSliderItems.map((e) {
+                      return _carouselSliderItems.indexOf(e) == _store.state.currentIndexCard
+                          ? DotWidget(active: true)
+                          : DotWidget();
+                    }).toList(),
+                  );
+                },
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 24.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Flexible(
-                      flex: 1,
-                      child: Center(
-                        child: ButtonIconWidget(
-                          icon: FontAwesomeIcons.store,
-                          label: 'Onde Aceita',
+              Observer(
+                builder: (_) {
+                  print('build 1');
+                  return AnimatedSizeAndFade(
+                    vsync: this,
+                    show: _store.state.showAllOptions,
+                    fadeDuration: Duration(milliseconds: 250),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 24.0),
+                          child: RowOptionsButtonWidget(),
                         ),
-                      ),
-                    ),
-                    Container(
-                      color: AppColors.gray.withOpacity(0.5),
-                      height: 58.0,
-                      width: 1.0,
-                    ),
-                    Flexible(
-                      flex: 1,
-                      child: Center(
-                        child: ButtonIconWidget(
-                          icon: FontAwesomeIcons.tag,
-                          label: 'Ofertas Exclusivas',
+                        Observer(
+                          builder: (_) {
+                            print('build 2');
+                            return AnimatedSizeAndFade(
+                              vsync: this,
+                              show: _store.state.showUnlock,
+                              fadeDuration: Duration(milliseconds: 250),
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 24.0, left: 18.0, right: 18.0),
+                                child: BottomUnlockWidget(),
+                              ),
+                            );
+                          },
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
+                  );
+                },
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18.0),
@@ -105,43 +147,8 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    SizedBox(
-                      width: screenWidth(context),
-                      child: ElevatedButton.icon(
-                        onPressed: () {},
-                        icon: LinearGradientMaskWidget(
-                          colors: [
-                            AppColors.yellow,
-                            AppColors.orange,
-                          ],
-                          child: Icon(
-                            Icons.lock_outline,
-                            color: AppColors.white,
-                          ),
-                        ),
-                        label: Padding(
-                          padding: const EdgeInsets.only(left: 6.0),
-                          child: Text(
-                            'DESBLOQUEAR SEU CARTÃO',
-                            style: AppTypography.grayDart16w500Museo,
-                          ),
-                        ),
-                        style: ButtonStyle(
-                          elevation: MaterialStateProperty.all<double>(0.0),
-                          backgroundColor: MaterialStateProperty.all<Color>(AppColors.transparent),
-                          padding:
-                              MaterialStateProperty.all<EdgeInsetsGeometry>(const EdgeInsets.symmetric(vertical: 12.0)),
-                          shape: MaterialStateProperty.all(
-                            RoundedRectangleBorder(
-                              side: BorderSide(color: AppColors.yellow, width: 2),
-                              borderRadius: BorderRadius.circular(6.0),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 20.0, bottom: 14.0),
+                      padding: const EdgeInsets.only(top: 18.0, bottom: 14.0),
                       child: Text(
                         'Mais Alelo',
                         style: AppTypography.black26w500Museo,
@@ -167,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
-                    Container(
+                    Padding(
                       padding: const EdgeInsets.symmetric(vertical: 18.0),
                       child: GridView.count(
                         physics: NeverScrollableScrollPhysics(),
@@ -176,7 +183,7 @@ class _HomePageState extends State<HomePage> {
                         crossAxisSpacing: 14.0,
                         mainAxisSpacing: 14.0,
                         shrinkWrap: true,
-                        children: smallCards
+                        children: Constants.smallCards
                             .map((e) => SmallCardWidget(
                                   background: e.background,
                                   label: e.label,
@@ -197,30 +204,5 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
-  }
-
-  List<Widget> _buildCardWidgets(BuildContext context) {
-    List<Widget> widgets = [];
-
-    widgets.addAll(cards.map(
-      (item) {
-        return Builder(
-          builder: (BuildContext context) {
-            return Container(
-              margin: const EdgeInsets.symmetric(vertical: 8.0),
-              child: CardWidget(
-                params: item,
-              ),
-            );
-          },
-        );
-      },
-    ).toList());
-
-    widgets.add(
-      LastCardWidget(),
-    );
-
-    return widgets;
   }
 }
