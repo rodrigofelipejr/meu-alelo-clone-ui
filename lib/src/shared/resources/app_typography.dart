@@ -4,14 +4,14 @@ import 'resources.dart';
 
 class AppTypography {
   static const TextStyle green18w500Museo = TextStyle(
-    color: AppColors.greenDark,
+    color: AppColors.green,
     fontWeight: FontWeight.w500,
     fontSize: 18.0,
     fontFamily: "MuseoSans",
   );
 
   static const TextStyle green16w500Museo = TextStyle(
-    color: AppColors.greenDark,
+    color: AppColors.green,
     fontWeight: FontWeight.w500,
     fontSize: 16.0,
     fontFamily: "MuseoSans",
@@ -25,28 +25,28 @@ class AppTypography {
   );
 
   static const TextStyle green12w300Museo = TextStyle(
-    color: AppColors.greenDark,
+    color: AppColors.green,
     fontWeight: FontWeight.w300,
     fontSize: 12.0,
     fontFamily: "MuseoSans",
   );
 
   static const TextStyle green22w700Museo = TextStyle(
-    color: AppColors.greenDark,
+    color: AppColors.green,
     fontWeight: FontWeight.w700,
     fontSize: 22.0,
     fontFamily: "MuseoSans",
   );
 
   static const TextStyle green18w700Museo = TextStyle(
-    color: AppColors.greenDark,
+    color: AppColors.green,
     fontWeight: FontWeight.w700,
     fontSize: 18.0,
     fontFamily: "MuseoSans",
   );
 
   static const TextStyle green20w300Museo = TextStyle(
-    color: AppColors.greenDark,
+    color: AppColors.green,
     fontWeight: FontWeight.w300,
     fontSize: 20.0,
     fontFamily: "MuseoSans",
@@ -89,28 +89,28 @@ class AppTypography {
     fontFamily: "MuseoSans",
   );
 
-  static const TextStyle gray14w300Museo = TextStyle(
-    color: AppColors.gray,
+  static const TextStyle grayDark14w300Museo = TextStyle(
+    color: AppColors.grayDark,
     fontWeight: FontWeight.w300,
     fontSize: 14.0,
     fontFamily: "MuseoSans",
   );
 
-  static const TextStyle gray14w700Museo = TextStyle(
+  static const TextStyle grayMedium14w700Museo = TextStyle(
     color: AppColors.grayMedium,
     fontWeight: FontWeight.w700,
-    fontSize: 16.0,
+    fontSize: 14.0,
     fontFamily: "MuseoSans",
   );
 
-  static const TextStyle gray14w500Museo = TextStyle(
+  static const TextStyle grayMedium14w500Museo = TextStyle(
     color: AppColors.grayMedium,
     fontWeight: FontWeight.w500,
-    fontSize: 16.0,
+    fontSize: 14.0,
     fontFamily: "MuseoSans",
   );
 
-  static const TextStyle grayDart14w300Museo = TextStyle(
+  static const TextStyle grayDart14w500Museo = TextStyle(
     color: AppColors.grayDark,
     fontWeight: FontWeight.w500,
     fontSize: 14.0,
@@ -124,15 +124,22 @@ class AppTypography {
     fontFamily: "MuseoSans",
   );
 
-  static const TextStyle gray16w300Museo = TextStyle(
-    color: AppColors.gray,
+  static const TextStyle grayMedium16w300Museo = TextStyle(
+    color: AppColors.grayMedium,
     fontWeight: FontWeight.w300,
     fontSize: 16.0,
     fontFamily: "MuseoSans",
   );
 
-  static const TextStyle gray12w300Museo = TextStyle(
-    color: AppColors.gray,
+  static const TextStyle grayDark16w300Museo = TextStyle(
+    color: AppColors.grayDark,
+    fontWeight: FontWeight.w300,
+    fontSize: 16.0,
+    fontFamily: "MuseoSans",
+  );
+
+  static const TextStyle grayLight12w300Museo = TextStyle(
+    color: AppColors.grayLight,
     fontWeight: FontWeight.w300,
     fontSize: 12.5,
     fontFamily: "MuseoSans",

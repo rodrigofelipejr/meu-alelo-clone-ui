@@ -20,8 +20,8 @@ class _BottomUnlockWidgetState extends State<BottomUnlockWidget> {
         onPressed: () {},
         icon: LinearGradientMaskWidget(
           colors: [
-            AppColors.yellow,
-            AppColors.orange,
+            AppColors.orangeGradient,
+            AppColors.orangeDarkGradient,
           ],
           child: Icon(
             Icons.lock_outline,
@@ -41,7 +41,7 @@ class _BottomUnlockWidgetState extends State<BottomUnlockWidget> {
           padding: MaterialStateProperty.all<EdgeInsetsGeometry>(const EdgeInsets.symmetric(vertical: 12.0)),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
-              side: BorderSide(color: AppColors.yellow, width: 2),
+              side: BorderSide(color: AppColors.orangeLight, width: 2),
               borderRadius: BorderRadius.circular(6.0),
             ),
           ),

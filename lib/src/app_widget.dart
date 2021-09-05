@@ -14,7 +14,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: AppColors.primaryMaterialColor,
       ),
-      initialRoute: AppRoutes.home,
+      initialRoute: AppRoutes.splash,
       routes: {
         AppRoutes.splash: (_) => SplashPage(),
         AppRoutes.home: (_) => HomePage(),

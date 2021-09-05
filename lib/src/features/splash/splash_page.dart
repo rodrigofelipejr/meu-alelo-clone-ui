@@ -40,7 +40,7 @@ class _SplashPageState extends State<SplashPage> {
         statusBarIconBrightness: Brightness.light,
       ),
       child: Scaffold(
-        backgroundColor: AppColors.violet,
+        backgroundColor: AppColors.violetDark,
         extendBody: true,
         body: Container(
           height: screenHeight(context),

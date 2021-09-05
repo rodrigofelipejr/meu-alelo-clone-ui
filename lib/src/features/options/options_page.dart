@@ -16,7 +16,7 @@ class _OptionsPageState extends State<OptionsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(title: 'Mais opções'),
-      backgroundColor: AppColors.grayLight,
+      backgroundColor: AppColors.grayWhite,
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Column(

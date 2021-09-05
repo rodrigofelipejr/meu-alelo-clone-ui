@@ -18,9 +18,9 @@ class CardWidget extends StatelessWidget {
   bool get isTypePrimary => params.type == TypeCard.primary;
   String get balanceFormatted => params.balance >= 0.0 ? Formatters.formatMoney(params.balance) : 'R\$ --';
   Gradient get gradient => isTypePrimary ? AppGradients.gradientGreen : AppGradients.gradientLime;
-  Color get color => isTypePrimary ? AppColors.grayLight : AppColors.greenDark;
-  Color get colorLines => isTypePrimary ? AppColors.grayLight : AppColors.greenDark;
-  Color get iconBackgroundColor => isTypePrimary ? AppColors.greenMedium : AppColors.limeMedium;
+  Color get color => isTypePrimary ? AppColors.white : AppColors.green;
+  Color get colorLines => isTypePrimary ? AppColors.white : AppColors.green;
+  Color get iconBackgroundColor => isTypePrimary ? AppColors.greenDarkGradient : AppColors.limeDarkGradient;
 
   Widget _buildIcon() {
     return isTypePrimary

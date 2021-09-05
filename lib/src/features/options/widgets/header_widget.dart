@@ -18,13 +18,13 @@ class HeaderWidget extends StatelessWidget {
         children: [
           FaIcon(
             FontAwesomeIcons.cogs,
-            color: AppColors.greenDark,
+            color: AppColors.green,
             size: 40.0,
           ),
           SizedBox(height: 12.0),
           Text(
             label,
-            style: AppTypography.gray14w300Museo,
+            style: AppTypography.grayDark14w300Museo,
           )
         ],
       ),

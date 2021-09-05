@@ -23,7 +23,7 @@ class CircleCheckWidget extends StatelessWidget {
             height: 62.0,
             width: 62.0,
             decoration: BoxDecoration(
-              color: AppColors.violet,
+              color: AppColors.violetDark,
               borderRadius: BorderRadius.circular(98.0),
             ),
           ),
@@ -35,14 +35,14 @@ class CircleCheckWidget extends StatelessWidget {
                 children: [
                   FaIcon(
                     FontAwesomeIcons.check,
-                    color: AppColors.violet,
+                    color: AppColors.violetDark,
                     size: 68.0,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 15.0, right: 8.0),
                     child: FaIcon(
                       FontAwesomeIcons.check,
-                      color: Colors.amber,
+                      color: AppColors.yellowMatte,
                       size: 38.0,
                     ),
                   ),

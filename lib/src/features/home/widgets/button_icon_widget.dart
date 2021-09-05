@@ -17,7 +17,7 @@ class ButtonIconWidget extends StatelessWidget {
     this.size = 20.0,
   }) : super(key: key);
 
-  TextStyle get style => fontBold ? AppTypography.gray14w700Museo : AppTypography.grayDart14w300Museo;
+  TextStyle get style => fontBold ? AppTypography.grayMedium14w700Museo : AppTypography.grayMedium14w500Museo;
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +26,10 @@ class ButtonIconWidget extends StatelessWidget {
       children: [
         FaIcon(
           icon,
-          color: AppColors.greenMedium,
+          color: AppColors.green,
           size: size,
         ),
-        SizedBox(height: 8.0),
+        SizedBox(height: 12.0),
         Text(
           label,
           style: style,

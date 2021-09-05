@@ -15,9 +15,9 @@ class LoadingWidget extends StatelessWidget {
         children: [
           SizedBox(
             height: defaultSize,
-            width: defaultSize,
+            width: defaultSize, 
             child: CircularProgressIndicator(
-              color: AppColors.greenDark,
+              color: AppColors.green,
               strokeWidth: 4.5,
             ),
           ),

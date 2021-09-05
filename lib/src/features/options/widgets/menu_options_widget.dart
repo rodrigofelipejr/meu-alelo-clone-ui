@@ -29,24 +29,24 @@ class MenuOptionsWidget extends StatelessWidget {
                 leading: Container(
                   child: FaIcon(
                     option.icon,
-                    color: AppColors.greenDark,
+                    color: AppColors.green,
                     size: 18.0,
                     // size: 48.0,
                   ),
                 ),
                 title: Text(
                   option.label,
-                  style: AppTypography.gray16w300Museo.copyWith(fontWeight: FontWeight.w500),
+                  style: AppTypography.grayMedium16w300Museo.copyWith(fontWeight: FontWeight.w500),
                 ),
                 trailing: Icon(
                   Icons.keyboard_arrow_right,
-                  color: AppColors.gray,
+                  color: AppColors.grayMedium,
                 ),
               ),
               if (isLast)
                 Divider(
                   height: 1.0,
-                  color: AppColors.gray,
+                  color: AppColors.grayMedium,
                 ),
             ],
           ),

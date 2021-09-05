@@ -22,7 +22,7 @@ class RowOptionsButtonWidget extends StatelessWidget {
           ),
         ),
         Container(
-          color: AppColors.gray.withOpacity(0.5),
+          color: AppColors.grayLight,
           height: 58.0,
           width: 1.0,
         ),

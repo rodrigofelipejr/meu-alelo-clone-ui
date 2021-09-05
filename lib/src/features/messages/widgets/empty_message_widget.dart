@@ -27,7 +27,7 @@ class EmptyMessageWidget extends StatelessWidget {
             child: FaIcon(
               FontAwesomeIcons.envelopeOpen,
               color: AppColors.white,
-              size: screenWidthPercentage(context) * 0.28,
+              size: screenWidthPercentage(context) * 0.24,
             ),
           ),
         ),
@@ -44,7 +44,7 @@ class EmptyMessageWidget extends StatelessWidget {
           child: Text(
             'Você não recebeu nenhuma mensagem, assim que chagar a gente avisa.',
             textAlign: TextAlign.center,
-            style: AppTypography.gray16w300Museo,
+            style: AppTypography.grayDark16w300Museo,
           ),
         ),
         SpaceWidget(height: screenHeightPercentage(context) * 0.05),

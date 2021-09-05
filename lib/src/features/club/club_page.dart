@@ -16,7 +16,7 @@ class _ClubPageState extends State<ClubPage> {
   bool _isLoading = true;
 
   Future<void> init() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(seconds: 2));
     _isLoading = false;
     setState(() {});
   }

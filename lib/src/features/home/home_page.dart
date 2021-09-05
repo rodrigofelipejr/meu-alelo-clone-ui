@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.grayLight,
+      backgroundColor: AppColors.grayWhite,
       appBar: AppBarWidget(
         title: 'Olá, Rodrigo',
         showIcon: true,
@@ -94,7 +94,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 32.0),
                 child: Text(
                   Formatters.dateDayMonthHourMinute(DateTime.now()),
-                  style: AppTypography.gray12w300Museo,
+                  style: AppTypography.grayLight12w300Museo,
                 ),
               ),
               Observer(
@@ -111,7 +111,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
               Observer(
                 builder: (_) {
-                  print('build 1');
                   return AnimatedSizeAndFade(
                     vsync: this,
                     show: _store.state.showAllOptions,
@@ -124,7 +123,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         ),
                         Observer(
                           builder: (_) {
-                            print('build 2');
                             return AnimatedSizeAndFade(
                               vsync: this,
                               show: _store.state.showUnlock,
@@ -156,7 +154,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                        color: AppColors.violet,
+                        color: AppColors.violetDark,
                         borderRadius: BorderRadius.circular(4.0),
                       ),
                       padding: const EdgeInsets.all(14.0),

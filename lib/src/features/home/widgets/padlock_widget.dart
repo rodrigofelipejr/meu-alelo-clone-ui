@@ -17,8 +17,7 @@ class PadlockWidget extends StatelessWidget {
           width: 24.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(100.0),
-            color: AppColors.yellow,
-            gradient: AppGradients.gradientYellow,
+            gradient: AppGradients.gradientOrange,
           ),
           child: Icon(
             Icons.lock_outline,

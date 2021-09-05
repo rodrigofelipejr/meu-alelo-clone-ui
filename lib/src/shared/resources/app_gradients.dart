@@ -8,8 +8,8 @@ class AppGradients {
     end: Alignment.centerRight,
     stops: [0.15, 0.9],
     colors: [
-      AppColors.limeMedium,
-      AppColors.lime,
+      AppColors.limeDarkGradient,
+      AppColors.limeGradient,
     ],
   );
 
@@ -18,18 +18,18 @@ class AppGradients {
     end: Alignment.centerRight,
     stops: [0.15, 0.9],
     colors: [
-      AppColors.greenMedium,
-      AppColors.green,
+      AppColors.greenDarkGradient,
+      AppColors.greenGradient,
     ],
   );
 
-  static Gradient gradientYellow = LinearGradient(
+  static Gradient gradientOrange = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     stops: [0.2, 0.8],
     colors: [
-      AppColors.yellow,
-      AppColors.orange,
+      AppColors.orangeGradient,
+      AppColors.orangeDarkGradient,
     ],
   );
 }

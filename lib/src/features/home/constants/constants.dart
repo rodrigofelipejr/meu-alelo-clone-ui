@@ -36,7 +36,7 @@ class Constants {
         child: FaIcon(
           FontAwesomeIcons.tags,
           color: AppColors.white,
-          size: 30.0,
+          size: 29.0,
         ),
       ),
     ),
@@ -47,31 +47,31 @@ class Constants {
       illustration: FaIcon(
         FontAwesomeIcons.creditCard,
         color: AppColors.lime,
-        size: 30.0,
+        size: 29.0,
       ),
     ),
     SmallCardDataModel(
-      background: AppColors.orange,
+      background: AppColors.orangeDark,
       label: 'Precisa de\najuda?',
       labelColor: AppColors.white,
       illustration: FaIcon(
         FontAwesomeIcons.solidQuestionCircle,
         color: AppColors.white,
-        size: 30.0,
+        size: 31.0,
       ),
     ),
     SmallCardDataModel(
-      background: AppColors.blueDark,
+      background: AppColors.aquaDark,
       label: 'Precisa de\najuda?',
       labelColor: AppColors.white,
       backgroundTag: AppColors.lime,
-      labelColorTag: AppColors.blueDark,
+      labelColorTag: AppColors.aquaDark,
     ),
     SmallCardDataModel(
       background: AppColors.aqua,
       label: 'Tag de pedágio:\n2 anos grátis',
-      labelColor: AppColors.blueDark,
-      backgroundTag: AppColors.pink,
+      labelColor: AppColors.white,
+      backgroundTag: AppColors.pinkDark,
       labelColorTag: AppColors.white,
       illustration: SvgPicture.asset(
         AppImages.logoVeloe,

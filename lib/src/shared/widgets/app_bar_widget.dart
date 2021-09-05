@@ -20,7 +20,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      backgroundColor: AppColors.grayLight,
+      backgroundColor: AppColors.grayWhite,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

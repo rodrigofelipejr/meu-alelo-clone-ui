@@ -12,13 +12,14 @@ class DotWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 200),
       height: 9.0,
       width: 9.0,
       margin: const EdgeInsets.symmetric(horizontal: 2.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: active ? AppColors.grayMedium : AppColors.gray.withOpacity(0.6),
+        color: active ? AppColors.grayMedium : AppColors.grayLight,
       ),
     );
   }

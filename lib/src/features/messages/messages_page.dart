@@ -32,7 +32,7 @@ class _MessagesPageState extends State<MessagesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(title: 'Mensagens'),
-      backgroundColor: AppColors.grayLight,
+      backgroundColor: AppColors.grayWhite,
       body: Center(
         child: SingleChildScrollView(
           child: LayoutBuilder(
