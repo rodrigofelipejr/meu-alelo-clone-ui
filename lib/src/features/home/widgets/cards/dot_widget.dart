@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../shared/resources/resources.dart';
+import '../../../../shared/resources/resources.dart';
 
 class DotWidget extends StatelessWidget {
   final bool active;

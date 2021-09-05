@@ -1,4 +1,4 @@
-import 'package:alelo/src/features/home/widgets/new_painter.dart';
+import 'package:alelo/src/features/home/widgets/small_cards/new_painter.dart';
 import 'package:alelo/src/shared/resources/resources.dart';
 import 'package:flutter/material.dart';
 

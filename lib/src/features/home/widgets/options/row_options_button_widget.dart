@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../../shared/resources/resources.dart';
-import 'widget.dart';
+import '../../../../shared/resources/resources.dart';
+import '../../../../shared/widgets/widgets.dart';
 
 class RowOptionsButtonWidget extends StatelessWidget {
   const RowOptionsButtonWidget({Key? key}) : super(key: key);

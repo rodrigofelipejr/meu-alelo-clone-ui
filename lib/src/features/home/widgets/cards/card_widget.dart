@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../../shared/helpers/helpers.dart';
-import '../../../shared/resources/resources.dart';
-import '../models/models.dart';
+import '../../../../shared/helpers/helpers.dart';
+import '../../../../shared/resources/resources.dart';
+import '../../models/models.dart';
 import 'lines_painter.dart';
 import 'padlock_widget.dart';
 

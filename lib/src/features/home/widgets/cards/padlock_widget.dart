@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../shared/resources/resources.dart';
+import '../../../../shared/resources/resources.dart';
 import 'pulse_animation_widget.dart';
 
 class PadlockWidget extends StatelessWidget {

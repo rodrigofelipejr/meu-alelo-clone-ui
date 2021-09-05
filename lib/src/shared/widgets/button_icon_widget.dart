@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../../shared/resources/resources.dart';
+import '../resources/resources.dart';
 
 class ButtonIconWidget extends StatelessWidget {
   final IconData icon;

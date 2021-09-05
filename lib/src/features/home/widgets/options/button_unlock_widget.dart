@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../shared/helpers/helpers.dart';
-import '../../../shared/resources/resources.dart';
-import '../../../shared/widgets/widgets.dart';
+import '../../../../shared/helpers/helpers.dart';
+import '../../../../shared/resources/resources.dart';
+import '../../../../shared/widgets/widgets.dart';
 
 class BottomUnlockWidget extends StatefulWidget {
   const BottomUnlockWidget({Key? key}) : super(key: key);
