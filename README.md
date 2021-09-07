@@ -9,3 +9,10 @@
 
 HIDE = FadeOut > Size
 SHOW = Size > FadeIn
+
+
+## TODO
+
+- Unificar widgets
+  - ButtonVerticalWidget
+  - ButtonIconWidget

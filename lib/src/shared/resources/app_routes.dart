@@ -5,4 +5,5 @@ class AppRoutes {
   static final String club = '/club';
   static final String home = '/home';
   static final String navigation = '/navigation';
+  static final String myCards = '/my-cards';
 }

@@ -1,8 +1,16 @@
 export 'animated_size_and_fade_widget.dart';
 export 'app_bar_widget.dart';
 export 'button_icon_widget.dart';
+export 'card/card_widget.dart';
+export 'card/lines_painter.dart';
+export 'conditional_parent_widget.dart';
 export 'flip_widget.dart';
+export 'last_update_date/last_update_date_widget.dart';
 export 'linear_gradient_mask_widget.dart';
 export 'loading_widget.dart';
+export 'padlock/padlock_widget.dart';
+export 'padlock/padlock_widget.dart';
+export 'padlock/pulse_animation_widget.dart';
 export 'scroll_behavior_widget.dart';
 export 'space_widget.dart';
+export 'touch_ripple_widget.dart';

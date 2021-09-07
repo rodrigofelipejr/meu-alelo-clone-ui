@@ -6,11 +6,15 @@ import '../resources/resources.dart';
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final bool showIcon;
+  final Color backgroundColor;
+  final MainAxisAlignment mainAxisAlignment;
 
   const AppBarWidget({
     Key? key,
     required this.title,
     this.showIcon = false,
+    this.backgroundColor = AppColors.grayWhite,
+    this.mainAxisAlignment = MainAxisAlignment.center,
   }) : super(key: key);
 
   @override
@@ -19,10 +23,11 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      iconTheme: IconThemeData(color: AppColors.green),
       elevation: 0,
-      backgroundColor: AppColors.grayWhite,
+      backgroundColor: backgroundColor,
       title: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: mainAxisAlignment,
         children: [
           Text(
             title,

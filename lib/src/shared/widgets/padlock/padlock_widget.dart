@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../../../../shared/resources/resources.dart';
+import '../../resources/resources.dart';
 import 'pulse_animation_widget.dart';
 
 class PadlockWidget extends StatelessWidget {
-  const PadlockWidget({Key? key}) : super(key: key);
+  final bool pulse;
+
+  const PadlockWidget({Key? key, this.pulse = true}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       alignment: Alignment.center,
       children: [
-        PulseAnimationWidget(size: 42.0),
+        if (pulse) PulseAnimationWidget(size: 42.0),
         Container(
           height: 24.0,
           width: 24.0,

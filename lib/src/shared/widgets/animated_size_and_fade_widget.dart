@@ -20,7 +20,7 @@ class AnimatedSizeAndFade extends StatefulWidget {
     required this.show,
     this.vsync,
     this.fadeDuration = const Duration(milliseconds: 400),
-    this.sizeDuration = const Duration(milliseconds: 400),
+    this.sizeDuration = const Duration(milliseconds: 500),
     this.fadeInCurve = Curves.linear,
     this.fadeOutCurve = Curves.linear,
     this.sizeCurve = Curves.easeInOut,

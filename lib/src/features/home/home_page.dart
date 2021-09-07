@@ -5,7 +5,8 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import '../../shared/helpers/helpers.dart';
 import '../../shared/resources/resources.dart';
 import '../../shared/widgets/widgets.dart';
-import 'constants/constants.dart';
+import '../../shared/constants/constants.dart' as shared;
+import 'constants/constants.dart' as local;
 import 'home_store.dart';
 import 'widgets/widget.dart';
 
@@ -31,14 +32,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 
   List<Widget> _buildCardWidgets(BuildContext context) {
-    Constants.cards.sort((a, b) => (b.blocked) ? -1 : 1);
+    shared.Constants.cards.sort((a, b) => (b.blocked) ? -1 : 1);
 
-    final widgets = Constants.cards
+    final widgets = shared.Constants.cards
         .map<Widget>(
           (item) => Container(
             margin: const EdgeInsets.symmetric(vertical: 8.0),
             child: CardWidget(
-              params: item,
+              card: item,
+              onTap: () => Navigator.of(context).pushNamed(AppRoutes.myCards, arguments: {'card': item}),
             ),
           ),
         )
@@ -56,7 +58,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       _store.state.copyWith(
         currentIndexCard: index,
         showAllOptions: isLastIndex ? false : true,
-        showUnlock: isLastIndex ? false : Constants.cards[index].blocked,
+        showUnlock: isLastIndex ? false : shared.Constants.cards[index].blocked,
       ),
     );
   }
@@ -89,13 +91,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 items: _carouselSliderItems,
                 carouselController: _carouselController,
               ),
-              Container(
-                alignment: Alignment.centerRight,
-                padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 32.0),
-                child: Text(
-                  Formatters.dateDayMonthHourMinute(DateTime.now()),
-                  style: AppTypography.grayLight12w300Museo,
-                ),
+              LastUpdateDateWidget(
+                date: DateTime.now(),
               ),
               Observer(
                 builder: (_) {
@@ -181,7 +178,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         crossAxisSpacing: 14.0,
                         mainAxisSpacing: 14.0,
                         shrinkWrap: true,
-                        children: Constants.smallCards
+                        children: local.Constants.smallCards
                             .map((e) => SmallCardWidget(
                                   background: e.background,
                                   label: e.label,
