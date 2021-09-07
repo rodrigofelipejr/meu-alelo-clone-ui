@@ -2,11 +2,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
+import '../../shared/constants/constants.dart';
 import '../../shared/helpers/helpers.dart';
 import '../../shared/resources/resources.dart';
 import '../../shared/widgets/widgets.dart';
-import '../../shared/constants/constants.dart' as shared;
-import 'constants/constants.dart' as local;
 import 'home_store.dart';
 import 'widgets/widget.dart';
 
@@ -32,9 +31,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 
   List<Widget> _buildCardWidgets(BuildContext context) {
-    shared.Constants.cards.sort((a, b) => (b.blocked) ? -1 : 1);
+    Constants.cards.sort((a, b) => (b.blocked) ? -1 : 1);
 
-    final widgets = shared.Constants.cards
+    final widgets = Constants.cards
         .map<Widget>(
           (item) => Container(
             margin: const EdgeInsets.symmetric(vertical: 8.0),
@@ -58,7 +57,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       _store.state.copyWith(
         currentIndexCard: index,
         showAllOptions: isLastIndex ? false : true,
-        showUnlock: isLastIndex ? false : shared.Constants.cards[index].blocked,
+        showUnlock: isLastIndex ? false : Constants.cards[index].blocked,
       ),
     );
   }
@@ -178,7 +177,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         crossAxisSpacing: 14.0,
                         mainAxisSpacing: 14.0,
                         shrinkWrap: true,
-                        children: local.Constants.smallCards
+                        children: Constants.smallCards
                             .map((e) => SmallCardWidget(
                                   background: e.background,
                                   label: e.label,

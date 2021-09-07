@@ -49,6 +49,7 @@ class _MyCardsPageState extends State<MyCardsPage> {
                 padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 14.0),
                 child: GridOptionsWidget(),
               ),
+              LastTransactionHistory(),
             ],
           ),
         ),

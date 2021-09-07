@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../shared/constants/constants.dart';
 import '../../../shared/resources/resources.dart';
-import '../constants/constants.dart';
 
 class MenuOptionsWidget extends StatelessWidget {
   const MenuOptionsWidget({Key? key}) : super(key: key);
@@ -12,10 +12,10 @@ class MenuOptionsWidget extends StatelessWidget {
     return ListView.builder(
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      itemCount: menuItems.length,
+      itemCount: Constants.optionsMenus.length,
       itemBuilder: (context, index) {
-        final Option option = menuItems[index];
-        final bool isLast = (menuItems.length - 1) != index;
+        final option = Constants.optionsMenus[index];
+        final bool isLast = (Constants.optionsMenus.length - 1) != index;
 
         return Container(
           color: AppColors.white,
@@ -28,7 +28,7 @@ class MenuOptionsWidget extends StatelessWidget {
                 horizontalTitleGap: 0.0,
                 leading: Container(
                   child: FaIcon(
-                    option.icon,
+                    option.faIcon,
                     color: AppColors.green,
                     size: 18.0,
                     // size: 48.0,

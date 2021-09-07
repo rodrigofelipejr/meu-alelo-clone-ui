@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../shared/constants/constants.dart';
 import '../../../shared/widgets/widgets.dart';
-import '../constants/constants.dart';
 
 class GridOptionsWidget extends StatelessWidget {
   const GridOptionsWidget({Key? key}) : super(key: key);
@@ -14,8 +14,8 @@ class GridOptionsWidget extends StatelessWidget {
       crossAxisCount: 3,
       crossAxisSpacing: 12.0,
       mainAxisSpacing: 12.0,
-      children: List.generate(Constants.options.length, (index) {
-        final option = Constants.options[index];
+      children: List.generate(Constants.optionsMyCards.length, (index) {
+        final option = Constants.optionsMyCards[index];
         return Center(
           child: ButtonFAIconWidget(
             faIcon: option.faIcon,
