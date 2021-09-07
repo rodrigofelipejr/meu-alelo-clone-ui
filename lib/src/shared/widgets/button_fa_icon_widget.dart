@@ -3,15 +3,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../resources/resources.dart';
 
-class ButtonIconWidget extends StatelessWidget {
-  final IconData icon;
+class ButtonFAIconWidget extends StatelessWidget {
+  final IconData faIcon;
   final String label;
   final bool fontBold;
   final double size;
 
-  const ButtonIconWidget({
+  const ButtonFAIconWidget({
     Key? key,
-    required this.icon,
+    required this.faIcon,
     required this.label,
     this.fontBold = false,
     this.size = 20.0,
@@ -25,7 +25,7 @@ class ButtonIconWidget extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         FaIcon(
-          icon,
+          faIcon,
           color: AppColors.green,
           size: size,
         ),

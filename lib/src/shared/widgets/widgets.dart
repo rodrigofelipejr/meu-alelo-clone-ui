@@ -1,6 +1,6 @@
 export 'animated_size_and_fade_widget.dart';
 export 'app_bar_widget.dart';
-export 'button_icon_widget.dart';
+export 'button_fa_icon_widget.dart';
 export 'card/card_widget.dart';
 export 'card/lines_painter.dart';
 export 'conditional_parent_widget.dart';

@@ -15,8 +15,8 @@ class RowOptionsButtonWidget extends StatelessWidget {
         Flexible(
           flex: 1,
           child: Center(
-            child: ButtonIconWidget(
-              icon: FontAwesomeIcons.store,
+            child: ButtonFAIconWidget(
+              faIcon: FontAwesomeIcons.store,
               label: 'Onde Aceita',
             ),
           ),
@@ -29,8 +29,8 @@ class RowOptionsButtonWidget extends StatelessWidget {
         Flexible(
           flex: 1,
           child: Center(
-            child: ButtonIconWidget(
-              icon: FontAwesomeIcons.tag,
+            child: ButtonFAIconWidget(
+              faIcon: FontAwesomeIcons.tag,
               label: 'Ofertas Exclusivas',
             ),
           ),

@@ -13,14 +13,14 @@ class LastCardWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ButtonIconWidget(
-            icon: FontAwesomeIcons.plusCircle,
+          ButtonFAIconWidget(
+            faIcon: FontAwesomeIcons.plusCircle,
             label: 'Adicionar\ncartão',
             fontBold: true,
           ),
           SizedBox(width: screenWidthPercentage(context) * 0.13),
-          ButtonIconWidget(
-            icon: FontAwesomeIcons.layerGroup,
+          ButtonFAIconWidget(
+            faIcon: FontAwesomeIcons.layerGroup,
             label: 'Organizar\ncartões',
             fontBold: true,
           ),
