@@ -11,4 +11,9 @@ class Formatters {
     var hourMinute = DateFormat('HH/mm');
     return '${dayMonth.format(date)} às ${hourMinute.format(date)}h';
   }
+
+  static String dateDayMonth(DateTime date) {
+    var dayMonth = DateFormat('dd/MM');
+    return dayMonth.format(date);
+  }
 }

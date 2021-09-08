@@ -77,6 +77,33 @@ class Constants {
       label: 'Alimentação',
       lastNumbers: 7847,
       balance: 847.35,
+      transactions: [
+        TransactionModel(
+          date: DateTime.utc(2021, 09, 04),
+          establishment: 'ABC Supermercado',
+          value: -46.98,
+        ),
+        TransactionModel(
+          date: DateTime.utc(2021, 09, 03),
+          establishment: 'ABC Supermercado',
+          value: -14.45,
+        ),
+        TransactionModel(
+          date: DateTime.utc(2021, 08, 31),
+          establishment: 'Disponibilização do Benefício',
+          value: 813.55,
+        ),
+        TransactionModel(
+          date: DateTime.utc(2021, 08, 29),
+          establishment: 'Supermercado Candidés',
+          value: -30.00,
+        ),
+        TransactionModel(
+          date: DateTime.utc(2021, 08, 15),
+          establishment: 'ABC Supermercado',
+          value: -27.93,
+        ),
+      ],
     ),
   ];
 

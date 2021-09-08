@@ -172,11 +172,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       padding: const EdgeInsets.symmetric(vertical: 18.0),
                       child: GridView.count(
                         physics: NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
                         crossAxisCount: 2,
                         childAspectRatio: 1.55,
                         crossAxisSpacing: 14.0,
                         mainAxisSpacing: 14.0,
-                        shrinkWrap: true,
                         children: Constants.smallCards
                             .map((e) => SmallCardWidget(
                                   background: e.background,

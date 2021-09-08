@@ -9,8 +9,8 @@ class GridOptionsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
       crossAxisCount: 3,
       crossAxisSpacing: 12.0,
       mainAxisSpacing: 12.0,

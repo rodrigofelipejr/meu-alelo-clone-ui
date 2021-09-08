@@ -124,6 +124,13 @@ class AppTypography {
     fontFamily: "MuseoSans",
   );
 
+  static const TextStyle grayDart14w700Museo = TextStyle(
+    color: AppColors.grayDark,
+    fontWeight: FontWeight.w700,
+    fontSize: 14.0,
+    fontFamily: "MuseoSans",
+  );
+
   static const TextStyle grayDart12w700Museo = TextStyle(
     color: AppColors.grayDark,
     fontWeight: FontWeight.w700,
@@ -134,6 +141,13 @@ class AppTypography {
   static const TextStyle grayDart16w500Museo = TextStyle(
     color: AppColors.grayDark,
     fontWeight: FontWeight.w500,
+    fontSize: 16.0,
+    fontFamily: "MuseoSans",
+  );
+
+  static const TextStyle grayDart16w300Museo = TextStyle(
+    color: AppColors.grayDark,
+    fontWeight: FontWeight.w300,
     fontSize: 16.0,
     fontFamily: "MuseoSans",
   );
