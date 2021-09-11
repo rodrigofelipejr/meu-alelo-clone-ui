@@ -1,11 +1,8 @@
-import 'package:alelo/src/features/club/club_page.dart';
-import 'package:alelo/src/features/home/home_page.dart';
-import 'package:alelo/src/features/messages/messages_page.dart';
-import 'package:alelo/src/features/options/options_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../shared/resources/resources.dart';
+import '../features.dart';
 import 'widgets/widgets.dart';
 
 class RootPage extends StatefulWidget {

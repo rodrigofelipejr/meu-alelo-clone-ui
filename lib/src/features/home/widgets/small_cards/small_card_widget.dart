@@ -1,6 +1,7 @@
-import 'package:alelo/src/features/home/widgets/small_cards/new_painter.dart';
-import 'package:alelo/src/shared/resources/resources.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../shared/resources/resources.dart';
+import '../widget.dart';
 
 class SmallCardWidget extends StatelessWidget {
   final Color background;

@@ -32,12 +32,12 @@ class CardWidget extends StatelessWidget {
         ? FaIcon(
             FontAwesomeIcons.shoppingCart,
             color: color,
-            size: height * 0.08,
+            size: height * 0.09,
           )
         : FaIcon(
             FontAwesomeIcons.utensils,
             color: color,
-            size: height * 0.10,
+            size: height * 0.11,
           );
   }
 
@@ -93,11 +93,11 @@ class CardWidget extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: width * 0.03,
-                top: height * 0.18,
+                left: width * 0.050,
+                top: height * 0.19,
                 child: Container(
                   alignment: Alignment.center,
-                  color: iconBackgroundColor,
+                  color: AppColors.transparent,
                   height: height * 0.15,
                   width: height * 0.15,
                   child: _buildIcon(),

@@ -10,61 +10,70 @@ class LinesPainter extends CustomPainter {
     final double widthStroke = 1.1;
 
     Path path_0 = Path();
-    path_0.moveTo(size.width * 0.001285347, size.height * 0.2129630);
-    path_0.lineTo(size.width * 0.1619537, size.height * 0.2129630);
-    path_0.lineTo(size.width * 0.1838046, size.height * 0.2129630);
-    path_0.cubicTo(size.width * 0.2045789, size.height * 0.2129630, size.width * 0.2172237, size.height * 0.2990352,
-        size.width * 0.2172237, size.height * 0.4444444);
-    path_0.lineTo(size.width * 0.2172237, size.height * 0.5925926);
+    path_0.moveTo(size.width * 0.1619537, size.height * 0.2129630);
+    path_0.lineTo(size.width * 0.1850900, size.height * 0.2129630);
+    path_0.cubicTo(size.width * 0.2058643, size.height * 0.2129630, size.width * 0.2185090, size.height * 0.2990352,
+        size.width * 0.2185090, size.height * 0.4444444);
+    path_0.lineTo(size.width * 0.2185090, size.height * 0.5925926);
 
-    Paint paintStroke0 = Paint()
+    Paint paint0Stroke = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = widthStroke;
-    paintStroke0.color = color;
-    canvas.drawPath(path_0, paintStroke0);
+    paint0Stroke.color = color;
+    canvas.drawPath(path_0, paint0Stroke);
 
     Path path_1 = Path();
-    path_1.moveTo(size.width * 0.2172237, size.height * 0.5925926);
-    path_1.lineTo(size.width * 0.2172237, size.height * 0.7443537);
-    path_1.cubicTo(size.width * 0.2172237, size.height * 0.8933093, size.width * 0.2296542, size.height * 0.9814815,
-        size.width * 0.2500763, size.height * 0.9814815);
-    path_1.lineTo(size.width * 0.2715578, size.height * 0.9814815);
-    path_1.lineTo(size.width * 0.4408740, size.height * 0.9814815);
-    path_1.lineTo(size.width * 0.5668380, size.height * 0.9814815);
+    path_1.moveTo(size.width * 0.2185090, size.height * 0.5925926);
+    path_1.lineTo(size.width * 0.2185090, size.height * 0.7443537);
+    path_1.cubicTo(size.width * 0.2185090, size.height * 0.8933093, size.width * 0.2309396, size.height * 0.9814815,
+        size.width * 0.2513617, size.height * 0.9814815);
+    path_1.lineTo(size.width * 0.2728432, size.height * 0.9814815);
+    path_1.lineTo(size.width * 0.4421594, size.height * 0.9814815);
+    path_1.lineTo(size.width * 0.5681234, size.height * 0.9814815);
 
-    Paint paintStroke1 = Paint()
+    Paint paint1Stroke = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = widthStroke;
-    paintStroke1.color = color;
-    canvas.drawPath(path_1, paintStroke1);
+    paint1Stroke.color = color;
+    canvas.drawPath(path_1, paint1Stroke);
 
     Path path_2 = Path();
-    path_2.moveTo(size.width * 0.5578406, size.height * 0.9814815);
-    path_2.lineTo(size.width * 0.7271568, size.height * 0.9814815);
-    path_2.lineTo(size.width * 0.7486375, size.height * 0.9814815);
-    path_2.cubicTo(size.width * 0.7690617, size.height * 0.9814815, size.width * 0.7814910, size.height * 0.8933093,
-        size.width * 0.7814910, size.height * 0.7443537);
-    path_2.lineTo(size.width * 0.7814910, size.height * 0.3981500);
+    path_2.moveTo(size.width, size.height * 0.01851870);
+    path_2.lineTo(size.width * 0.8380463, size.height * 0.01851870);
+    path_2.lineTo(size.width * 0.8161954, size.height * 0.01851870);
+    path_2.cubicTo(size.width * 0.7954216, size.height * 0.01851870, size.width * 0.7827763, size.height * 0.1045907,
+        size.width * 0.7827763, size.height * 0.2500000);
+    path_2.lineTo(size.width * 0.7827763, size.height * 0.3981481);
 
-    Paint paintStroke2 = Paint()
+    Paint paint2Stroke = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = widthStroke;
-    paintStroke2.color = color;
-    canvas.drawPath(path_2, paintStroke2);
+    paint2Stroke.color = color;
+    canvas.drawPath(path_2, paint2Stroke);
 
     Path path_3 = Path();
-    path_3.moveTo(size.width * 0.9987147, size.height * 0.01851870);
-    path_3.lineTo(size.width * 0.8367609, size.height * 0.01851870);
-    path_3.lineTo(size.width * 0.8149100, size.height * 0.01851870);
-    path_3.cubicTo(size.width * 0.7941362, size.height * 0.01851870, size.width * 0.7814910, size.height * 0.1045907,
-        size.width * 0.7814910, size.height * 0.2500000);
-    path_3.lineTo(size.width * 0.7814910, size.height * 0.3981481);
+    path_3.moveTo(size.width * 0.5591260, size.height * 0.9814815);
+    path_3.lineTo(size.width * 0.7284422, size.height * 0.9814815);
+    path_3.lineTo(size.width * 0.7499229, size.height * 0.9814815);
+    path_3.cubicTo(size.width * 0.7703470, size.height * 0.9814815, size.width * 0.7827763, size.height * 0.8933093,
+        size.width * 0.7827763, size.height * 0.7443537);
+    path_3.lineTo(size.width * 0.7827763, size.height * 0.3981500);
 
-    Paint paintStroke3 = Paint()
+    Paint paint3Stroke = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = widthStroke;
-    paintStroke3.color = color;
-    canvas.drawPath(path_3, paintStroke3);
+    paint3Stroke.color = color;
+    canvas.drawPath(path_3, paint3Stroke);
+
+    Path path_4 = Path();
+    path_4.moveTo(size.width * 0.002565203, size.height * 0.2129630);
+    path_4.lineTo(size.width * 0.03598972, size.height * 0.2129630);
+
+    Paint paint4Stroke = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = widthStroke;
+    paint4Stroke.color = color;
+    canvas.drawPath(path_4, paint4Stroke);
   }
 
   @override

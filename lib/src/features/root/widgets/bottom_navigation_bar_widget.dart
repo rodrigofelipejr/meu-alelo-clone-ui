@@ -1,4 +1,3 @@
-import 'package:alelo/src/shared/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../../shared/resources/resources.dart';
