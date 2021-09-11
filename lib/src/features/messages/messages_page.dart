@@ -15,7 +15,7 @@ class _MessagesPageState extends State<MessagesPage> {
   bool _isLoading = true;
 
   Future<void> init() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(seconds: 1));
     _isLoading = false;
     setState(() {});
   }

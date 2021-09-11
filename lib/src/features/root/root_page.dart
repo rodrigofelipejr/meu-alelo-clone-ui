@@ -3,6 +3,7 @@ import 'package:alelo/src/features/home/home_page.dart';
 import 'package:alelo/src/features/messages/messages_page.dart';
 import 'package:alelo/src/features/options/options_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../shared/resources/resources.dart';
 import 'widgets/widgets.dart';
@@ -28,6 +29,22 @@ class _RootPageState extends State<RootPage> {
     setState(() {
       _currentIndex = index;
     });
+  }
+
+  @override
+  void initState() {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: AppColors.transparent,
+      statusBarBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.dark,
+    ));
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
+    super.dispose();
   }
 
   @override

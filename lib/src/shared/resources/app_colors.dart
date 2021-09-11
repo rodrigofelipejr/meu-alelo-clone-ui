@@ -28,8 +28,7 @@ class AppColors {
   static const Color grayLight = Color(0xFFCBCCCD);
   static const Color gray = Color(0xFFC4C4C4);
   static const Color grayMedium = Color(0xFF757575);
-  static const Color grayDark = Color(0xFF525457);
-  static const Color grayBottomAppBar = Color(0xFFE5E5E5);
+  static const Color grayDark = Color(0xFF525457); 
   static const MaterialColor primaryMaterialColor = MaterialColor(0XFFF5F5F5, {
     50: Color.fromRGBO(245, 245, 245, 0.05),
     100: Color.fromRGBO(245, 245, 245, 0.1),

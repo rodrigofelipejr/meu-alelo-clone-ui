@@ -17,10 +17,10 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     SystemChannels.textInput.invokeMethod('TextInput.hide');
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
 
     WidgetsBinding.instance?.addPostFrameCallback((_) {
-      Future.delayed(Duration(seconds: 3)).then(
+      Future.delayed(Duration(seconds: 2)).then(
         (_) => Navigator.of(context).pushReplacementNamed(AppRoutes.root),
       );
     });
@@ -34,36 +34,30 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: SystemUiOverlayStyle(
-        statusBarColor: AppColors.transparent,
-        statusBarIconBrightness: Brightness.light,
-      ),
-      child: Scaffold(
-        backgroundColor: AppColors.violetDark,
-        extendBody: true,
-        body: Container(
-          height: screenHeight(context),
-          child: Stack(
-            fit: StackFit.expand,
-            alignment: Alignment.topRight,
-            children: [
-              DishWidget(),
-              Padding(
-                padding: EdgeInsets.all(
-                  screenHeightPercentage(context) * 0.05,
-                ),
-                child: Stack(
-                  fit: StackFit.expand,
-                  alignment: Alignment.bottomLeft,
-                  children: [
-                    LogoWidget(),
-                    DescriptionWidget(),
-                  ],
-                ),
+    return Scaffold(
+      backgroundColor: AppColors.violetDark,
+      extendBody: true,
+      body: Container(
+        height: screenHeight(context),
+        child: Stack(
+          fit: StackFit.expand,
+          alignment: Alignment.topRight,
+          children: [
+            DishWidget(),
+            Padding(
+              padding: EdgeInsets.all(
+                screenHeightPercentage(context) * 0.05,
               ),
-            ],
-          ),
+              child: Stack(
+                fit: StackFit.expand,
+                alignment: Alignment.bottomLeft,
+                children: [
+                  LogoWidget(),
+                  DescriptionWidget(),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
