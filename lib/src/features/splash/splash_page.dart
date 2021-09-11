@@ -17,18 +17,18 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     SystemChannels.textInput.invokeMethod('TextInput.hide');
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
 
     WidgetsBinding.instance?.addPostFrameCallback((_) {
       Future.delayed(Duration(seconds: 3)).then(
-        (_) => Navigator.of(context).pushReplacementNamed(AppRoutes.home),
+        (_) => Navigator.of(context).pushReplacementNamed(AppRoutes.root),
       );
     });
   }
 
   @override
   void dispose() {
-    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
     super.dispose();
   }
 
